@@ -115,3 +115,53 @@ li a {
 
   
 }
+
+
+
+
+
+
+
+@media (max-width: 691px) {
+
+.head {
+
+  background-color: transparent;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0px;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 50px black;
+  backdrop-filter: blur(2px);
+  transition-duration: 2s;
+}
+
+
+
+.logo {
+  color: rgb(216, 115, 0);
+  text-shadow: 0px 0px 20px white;
+  font-family: 'main';
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+
+ul {
+  padding-left: 0px;
+}
+
+
+li a {
+  color: white;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  font-family: 'brush';
+  font-size: 0.55rem;
+  margin-left: 0px;
+  margin-right: 8px;
+  transition-duration: 0.5s;
+}
+
+
+}
