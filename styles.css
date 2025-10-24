@@ -16,6 +16,7 @@ body {
   background-image: url(bg/bg1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 
@@ -84,10 +85,13 @@ li a:hover {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
 
   body {
     background-image: url(bg/bg1-m.jpg);
+    background-size: cover;
+    min-height: 100vh;
+
   }
   
 }
