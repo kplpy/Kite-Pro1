@@ -73,3 +73,21 @@ li a:hover {
   text-shadow: 0px 0px 15px white;
 
 } 
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  body {
+    background-image: url(bg/bg1-m.jpg);
+  }
+  
+}
