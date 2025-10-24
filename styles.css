@@ -1,0 +1,75 @@
+* {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'main';
+  src: url(fonts/RINGM.TTF);
+}
+
+@font-face {
+  font-family: 'brush';
+  src: url(fonts/hobbitonbrushhand.ttf);
+}
+
+body {
+  background-image: url(bg/bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+.head {
+  background-color: transparent;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: px;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 50px black;
+  backdrop-filter: blur(2px);
+  transition-duration: 2s;
+}
+
+.head:hover {
+  box-shadow: 0px 0px 50px white;
+  
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: black;
+  text-shadow: 0px 0px 30px rgb(216, 115, 0);
+  font-family: 'main';
+  font-size: 2rem;
+  cursor: pointer;
+
+}
+
+header nav li {
+  list-style: none;
+  display: inline-block;
+}
+
+li a {
+  color: white;
+  font-family: 'brush';
+  font-size: 1.7rem;
+  margin-right: 65px;
+  transition-duration: 0.5s;
+}
+
+li a:hover {
+  color: rgb(216, 115, 0);
+  cursor: pointer;
+  text-shadow: 0px 0px 15px white;
+
+} 
