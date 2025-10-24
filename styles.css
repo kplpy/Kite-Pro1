@@ -28,7 +28,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
-  padding-bottom: px;
   border-radius: 2rem;
   box-shadow: 0px 0px 50px black;
   backdrop-filter: blur(2px);
@@ -85,13 +84,34 @@ li a:hover {
 
 
 
-@media (max-width: 720px) {
+@media (max-width: 875px) {
 
   body {
     background-image: url(bg/bg1-m.jpg);
     background-size: cover;
     min-height: 100vh;
-
   }
+
+
+
+  .logo {
+  color: rgb(216, 115, 0);
+  text-shadow: 0px 0px 30px white;
+  font-family: 'main';
+  font-size: 1.8rem;
+  cursor: pointer;
+
+}
+
+li a {
+  text-shadow: 0px 0px 10px white;
+  color: white;
+  font-family: 'brush';
+  font-size: 1.3rem;
+  margin-right: 0px;
+  margin-left: 40px;
+  transition-duration: 0.5s;
+}
+
   
 }
