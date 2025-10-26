@@ -262,11 +262,21 @@ li a:hover {
 
 @media (max-width: 875px) {
 
-  body {
-    
-    background-image: url(bg/bg1-m.jpg);
-    
+    body {
+    background: none; /* remove background from body */
   }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bg/bg1-m.jpg') center/cover no-repeat;
+    z-index: -1;
+  }
+}
 
   .head {
     width: 98%;
