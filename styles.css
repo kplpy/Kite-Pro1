@@ -12,8 +12,14 @@
   src: url(fonts/hobbitonbrushhand.ttf);
 }
 
+@font-face {
+  font-family: 'moris';
+  src: url(fonts/MorrisRomanBlack.ttf);
+}
+
 body {
-  background-image: url(bg/bg1.jpg);
+  background-attachment: fixed;
+  background-image: url("bg/bg1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -22,21 +28,23 @@ body {
 
 
 
-
 .head {
+  z-index: 999;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  position: fixed;
+  width: 98.9%;
   background-color: transparent;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
+  top: 1.5%;
   border-radius: 2rem;
   box-shadow: 0px 0px 50px black;
   backdrop-filter: blur(2px);
-  transition-duration: 2s;
+  transition-duration: 4s;
 }
 
 .head:hover {
   box-shadow: 0px 0px 50px white;
-  
+  transition-duration: 0.8s;
 }
 
 nav {
@@ -47,11 +55,18 @@ nav {
 
 .logo {
   color: black;
+  margin-left: 10px;
   text-shadow: 0px 0px 30px rgb(216, 115, 0);
   font-family: 'main';
-  font-size: 2rem;
+  font-size: 2.27rem;
   cursor: pointer;
+  transition-duration: 5s;
 
+}
+.logo:hover {
+  color: rgb(216, 115, 0);
+  text-shadow: 0px 0px 15px rgb(0, 0, 0);
+  transition-duration: 0.5s;
 }
 
 header nav li {
@@ -70,7 +85,7 @@ li a {
 li a:hover {
   color: rgb(216, 115, 0);
   cursor: pointer;
-  text-shadow: 0px 0px 15px white;
+  text-shadow: 0px 0px 15px rgb(0, 0, 0);
 
 } 
 
@@ -84,12 +99,177 @@ li a:hover {
 
 
 
+
+
+
+
+
+/* Sections */
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: 100px auto; /* adjust if your header height is different */
+}
+
+/* Center vertical line */
+.line {
+  position: absolute;
+  top: 110px; /* start below header */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  box-shadow: 0px 0px 10px black;
+  bottom: 0;
+  background-color: black;
+  z-index: 0;
+}
+
+/* Row layout */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 150px 0;
+  position: relative;
+}
+
+/* Containers */
+.container {
+  width: 35%;
+
+}
+
+.container.left {
+  margin-left: 9%; /* brings left container closer to line */
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.container.last {
+  margin-left: 32.65%; /* brings left container closer to line */
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.container.first {
+  margin-left: 32.65%; /* brings left container closer to line */
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.container.right {
+  margin-right: 9%; /* brings right container closer to line */
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+
+
+/* Image box with rounded corners */
+.image-box {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  display: block;
+  border-radius: 40px;
+}
+
+/* Blurred paragraph overlay */
+.overlay {
+  font-family: moris;
+  position: absolute;
+  bottom: 0;
+  height: 28%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* horizontally center text */
+  backdrop-filter: blur(2px);
+  color: white;
+  padding: 0 2px; /* small horizontal padding */
+  font-size: 1.02rem;
+  text-shadow: 0px 0px 10px black;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.gift-overlay {
+  font-family: moris;
+  position: absolute;
+  bottom: 0;
+  height: 18%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* horizontally center text */
+  backdrop-filter: blur(2px);
+  color: white;
+  padding: 0 2px; /* small horizontal padding */
+  font-size: 1.0rem;
+  text-shadow: 0px 0px 10px black;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Headings */
+.heading {
+  width: 45%;
+  z-index: 1;
+}
+
+.heading.left {
+  text-align: right;
+}
+
+.heading.right {
+  text-align: left;
+}
+
+.heading h1 {
+  font-family: brush;
+  color: black;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  font-size: 3rem;
+  margin: 0;
+}
+
+
+
+
+/* Sections */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header Responsive */
+
+
 @media (max-width: 875px) {
 
   body {
     background-image: url(bg/bg1-m.jpg);
     background-size: cover;
     min-height: 100vh;
+  }
+
+  .head {
+    width: 98%;
   }
 
 
@@ -108,7 +288,7 @@ li a {
   color: white;
   font-family: 'brush';
   font-size: 1.3rem;
-  margin-right: 0px;
+  margin-right: 20px;
   margin-left: 40px;
   transition-duration: 0.5s;
 }
@@ -120,7 +300,11 @@ li a {
 
 
 
-@media (max-width: 695px) {
+@media (max-width: 730px) {
+
+    .head {
+    width: 97.5%;
+  }
 
   nav {
     display: flex;
@@ -202,3 +386,602 @@ li a {
     display: inline-block;
   }
 }
+
+
+/* Header responsive */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Timeline Responsiveness */
+
+/* Base smaller screen scaling */
+@media (max-width: 1200px) {
+  .timeline {
+    width: 90%;
+  }
+
+  .line {
+    left: 50%;
+  }
+
+  .container {
+    width: 40%;
+  }
+
+  .container.left {
+    margin-left: 6%;
+  }
+
+  .container.right {
+    margin-right: 6%;
+  }
+
+  .container.first,
+  .container.last {
+    margin-left: 30%;
+  }
+
+  .heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .overlay {
+    font-size: 0.95rem;
+  }
+
+  .gift-overlay {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 42%;
+  }
+
+  .container.left {
+    margin-left: 5%;
+  }
+
+  .container.right {
+    margin-right: 5%;
+  }
+
+  .container.first,
+  .container.last {
+    margin-left: 28%;
+  }
+
+  .heading h1 {
+    font-size: 2.3rem;
+  }
+
+  .overlay {
+    font-size: 0.9rem;
+  }
+
+  .gift-overlay {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 875px) {
+  .timeline {
+    width: 95%;
+    margin: 80px auto;
+  }
+
+  .container {
+    width: 45%;
+  }
+
+  .container.left {
+    margin-left: 5%;
+  }
+
+  .container.right {
+    margin-right: 5%;
+  }
+
+  .container.first,
+  .container.last {
+    margin-left: 27%;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .overlay {
+    font-size: 0.80rem;
+  }
+
+  .gift-overlay {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 728px) {
+  .timeline {
+    width: 98%;
+    margin: 60px auto;
+  }
+
+  .container {
+    width: 48%;
+  }
+
+  .container.left {
+    margin-left: 4%;
+  }
+
+  .container.right {
+    margin-right: 4%;
+  }
+
+  .container.first,
+  .container.last {
+    margin-left: 26%;
+  }
+
+  .heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .overlay {
+    font-size: 0.8rem;
+  }
+
+  .gift-overlay {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .timeline {
+    width: 100%;
+    margin: 40px auto;
+  }
+
+  .container {
+    width: 90%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .overlay {
+    font-size: 0.7rem;
+  }
+
+  .gift-overlay {
+    font-size: 0.65rem;
+  }
+}
+
+
+
+
+
+
+/* my changings */
+
+
+
+
+/*containers */ /* mobile */
+
+@media (max-width: 875px) {
+
+  .timeline {
+    margin-top: 150px;
+  }
+
+  /* Hide the vertical line */
+  .line {
+    display: none;
+  }
+
+  /* Hide the headings */
+  .heading {
+    display: none;
+  }
+
+  /* Stack containers on top of each other */
+  .row {
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    margin: 50px 0; /* smaller vertical spacing */
+  }
+
+  .container {
+    width: 75%; /* full width for stacked view */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+
+.overlay {
+font-size: 1.3rem;
+
+}
+
+
+
+
+}
+
+@media (max-width: 730px) {
+    /* Stack containers on top of each other */
+  .row {
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    margin: 30px 0; /* smaller vertical spacing */
+  }
+
+  .container {
+    width: 75%; /* full width for stacked view */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 425px) {
+    /* Stack containers on top of each other */
+  .row {
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    margin: 18px 0; /* smaller vertical spacing */
+  }
+
+  .container {
+    width: 75%; /* full width for stacked view */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+  }
+}
+
+@media (max-width: 375px) {
+    /* Stack containers on top of each other */
+  .row {
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    margin: 20px 0; /* smaller vertical spacing */
+  }
+
+  .container {
+    width: 80%; /* full width for stacked view */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+/* containers*/ /* mobile */
+
+
+
+/* timeline for header */
+
+
+
+@media (max-width: 730px) {
+  .timeline {
+    margin-top: 230px;
+  }
+
+}
+
+@media (max-width: 425px) {
+  .timeline {
+    margin-top: 190px;
+  }
+
+}
+@media (max-width: 283px) {
+  .timeline {
+    margin-top: 240px;
+  }
+
+}
+
+
+
+
+/* time line for header */
+
+
+
+
+
+/* overlay */  
+@media (max-width: 1440px) {
+  .overlay {
+font-size: 0.85rem;
+
+
+}
+}
+@media (max-width: 1340px) {
+  .overlay {
+font-size: 0.80rem;
+
+}
+}
+
+@media (max-width: 1280px) {
+  .overlay {
+font-size: 0.75rem;
+
+}
+}
+
+@media (max-width: 1200px) {
+  .overlay {
+font-size: 0.90rem;
+
+}
+}
+
+@media (max-width: 1080px) {
+  .overlay {
+font-size: 0.80rem;
+
+}
+}
+
+@media (max-width: 940px) {
+  .overlay {
+font-size: 0.75rem;
+
+}
+}
+
+                       @media (max-width: 875px) {
+  .overlay {
+    height: 15%;
+
+
+}
+}
+
+@media (max-width: 800px) {
+  .overlay {
+font-size: 1rem;
+height: 25%;
+
+
+}
+}
+
+@media (max-width: 600px) {
+  .overlay {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (max-width: 497px) {
+  .overlay {
+    font-size: 0.65rem;
+  }
+
+}
+@media (max-width: 397px) {
+  .overlay {
+    font-size: 0.55rem;
+    height: 25%;
+  }
+
+}
+@media (max-width: 340px) {
+  .overlay {
+    font-size: 0.45rem;
+    height: 25%;
+
+  }
+
+}
+
+
+/* overlay */
+
+
+/* gift overlay */
+
+/* height */
+
+@media (max-width: 1600px) {
+  .gift-overlay {
+    height: 21%;
+  }
+
+
+}
+
+@media (max-width: 1440px) {
+  .gift-overlay {
+    height: 25%;
+  }
+}
+
+@media (max-width: 1340px) {
+  .gift-overlay {
+    height: 35%;
+  }
+
+
+}
+
+  @media (max-width: 1200px) {
+  .gift-overlay {
+    height: 16%;
+  }
+
+
+}
+
+  @media (max-width: 480px) {
+  .gift-overlay {
+    height: 20%;
+  }
+
+
+}
+ /* height */
+
+
+ /* font */
+
+
+ @media (max-width: 1440px) {
+  .gift-overlay {
+font-size: 0.85rem;
+
+
+}
+}
+@media (max-width: 1340px) {
+  .gift-overlay {
+font-size: 0.85rem;
+height: 22%;
+
+}
+}
+
+@media (max-width: 1280px) {
+  .gift-overlay {
+font-size: 0.80rem;
+
+}
+}
+
+@media (max-width: 1200px) {
+  .gift-overlay {
+font-size: 0.90rem;
+
+}
+}
+
+@media (max-width: 1080px) {
+  .gift-overlay {
+font-size: 0.80rem;
+
+}
+}
+
+@media (max-width: 940px) {
+  .gift-overlay {
+font-size: 0.75rem;
+
+}
+}
+
+@media (max-width: 875px) {
+  .gift-overlay {
+  height: 12%;
+
+}
+}
+
+@media (max-width: 800px) {
+  .gift-overlay {
+    height: 18%;
+font-size: 0.95rem;
+
+
+
+}
+}
+
+@media (max-width: 600px) {
+  .gift-overlay {
+    font-size: 0.75rem;
+  }
+
+}
+
+@media (max-width: 497px) {
+  .gift-overlay {
+    font-size: 0.65rem;
+  }
+
+}
+@media (max-width: 397px) {
+  .gift-overlay {
+    font-size: 0.55rem;
+
+  }
+
+}
+@media (max-width: 340px) {
+  .gift-overlay {
+    font-size: 0.45rem;
+
+
+  }
+
+}
+
+
+ /* font */
+
+
+
+
+/* gift overlay */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* headingfs */
+
+@media (max-width: 1280px){
+.heading h1 {
+  font-family: brush;
+  color: black;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  font-size: 2.6rem;
+  margin: 0;
+}
+}
+/* headings */
+
