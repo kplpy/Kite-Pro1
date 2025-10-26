@@ -114,7 +114,7 @@ li a:hover {
 .timeline {
   position: relative;
   width: 80%;
-  margin: 100px auto; /* adjust if your header height is different */
+  margin: 100px auto; 
 }
 
 /* Center vertical line */
