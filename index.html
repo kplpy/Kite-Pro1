@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>THE LOTR PAGE</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
   </head>
   <body>
 
@@ -14,9 +15,9 @@
       <nav class="nav">
         <div><a class="logo" href="index.html">Lord of the Rings</a></div>
         <ul>
-          <li><a>Beginning</a></li>
-          <li><a>Fellowship</a></li>
-          <li><a>Breaking</a></li>
+          <li><a onclick="scrollToPoint(0); return false;">Beginning</a></li>
+          <li><a href="#fel">Fellowship</a></li>
+          <li><a href="#bre">Breaking</a></li>
         </ul>
       </nav>
     </header>
@@ -26,11 +27,11 @@
   <div class="line"></div>
 
   <!-- Section 1 (Container left, Heading right) -->
-  <div class="row">
+  <div class="row" >
     <div class="container first" id="green">
-      <div class="image-box">
-        <img src="section/s1.jpg" alt="Image 1">
-        <div class="overlay">
+      <div class="image-box" >
+        <img src="section/s1.jpg" alt="Image 1" >
+        <div class="overlay" >
           <p>The Shire witnessed the arrival of a wise and gentle wizard. His presence sparked curiosity and wonder, hinting at adventures yet to come and the beginning of an extraordinary tale that would change lives forever.</p>
         </div>
       </div>
@@ -329,7 +330,7 @@
   </div>
 
     <!-- Section 21 (Container left, Heading right) -->
-  <div class="row">
+  <div class="row" id="fel">
     <div class="container left">
       <div class="image-box">
         <img src="section/s21.jpg" alt="Image 1">
@@ -844,7 +845,7 @@
   </div>
 
     <!-- Section 55 (Container left, Heading right) -->
-  <div class="row">
+  <div class="row" id="bre">
     <div class="container last" id="green">
       <div class="image-box">
         <img src="section/s55.jpg" alt="Image 1">
@@ -856,7 +857,7 @@
   </div>
 
 
-<script src="script.js"></script>
+</section>
 
 
   </body>

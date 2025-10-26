@@ -17,6 +17,10 @@
   src: url(fonts/MorrisRomanBlack.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("bg/bg1.jpg");
   background-repeat: no-repeat;
@@ -276,7 +280,7 @@ li a:hover {
     background: url('bg/bg1-m.jpg') center/cover no-repeat;
     z-index: -1;
   }
-}
+
 
   .head {
     width: 98%;
