@@ -18,11 +18,11 @@
 }
 
 body {
-  background-attachment: fixed;
   background-image: url("bg/bg1.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  
 }
 
 
@@ -263,11 +263,9 @@ li a:hover {
 @media (max-width: 875px) {
 
   body {
-    background-attachment: scroll;
+    
     background-image: url(bg/bg1-m.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    
   }
 
   .head {
