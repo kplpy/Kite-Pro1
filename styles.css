@@ -22,14 +22,11 @@ html {
 }
 
 body {
-  background-image: url("bg/bg1.jpg");
+  background-image: url('bg/bg1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  
 }
-
-
 
 
 .head {
@@ -38,11 +35,11 @@ body {
   padding-bottom: 0px;
   position: fixed;
   width: 98.9%;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.100);
   top: 1.5%;
   border-radius: 2rem;
-  box-shadow: 0px 0px 50px black;
-  backdrop-filter: blur(2px);
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
+  backdrop-filter: blur(1.2px);
   transition-duration: 4s;
 }
 
@@ -58,13 +55,13 @@ nav {
 }
 
 .logo {
-  color: black;
-  margin-left: 10px;
-  text-shadow: 0px 0px 30px rgb(216, 115, 0);
+  color: rgb(0, 0, 0);
+  margin-left: 30px;
+  text-shadow: 0px 0px 15px rgb(255, 255, 255);
   font-family: 'main';
   font-size: 2.27rem;
   cursor: pointer;
-  transition-duration: 5s;
+  transition-duration: 4s;
 
 }
 .logo:hover {
@@ -95,7 +92,42 @@ li a:hover {
 
 
 
+/* footer */
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 2rem;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.250);
+  backdrop-filter: blur(1px);
+  transition-duration: 4s;
+}
 
+.insta {
+  width: 5%;
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 212, 0, 0.5);
+  transition-duration: 0.5s;
+
+}
+.insta:hover {
+  cursor: pointer;
+  scale: 1.1;
+  box-shadow: 0px 0px 20px black;
+  filter: saturate(1.2);
+}
+
+.popo:visited {
+  filter: saturate(0);
+}
+
+
+
+/* footer */
 
 
 
@@ -120,7 +152,7 @@ li a:hover {
 /* Center vertical line */
 .line {
   position: absolute;
-  top: 110px; /* start below header */
+  top: 110px;
   left: 50%;
   transform: translateX(-50%);
   width: 5px;
@@ -152,26 +184,26 @@ li a:hover {
 }
 
 .container.last {
-  margin-left: 32.65%; /* brings left container closer to line */
+  margin-left: 32.65%; /*left container closer*/
   border-radius: 40px;
   transition-duration: 0.3s;
 }
 
 .container.first {
-  margin-left: 32.65%; /* brings left container closer to line */
+  margin-left: 32.65%; /* left container clo*/
   border-radius: 40px;
   transition-duration: 0.3s;
 }
 
 .container.right {
-  margin-right: 9%; /* brings right container closer to line */
+  margin-right: 9%; /*right container closer  */
   border-radius: 40px;
   transition-duration: 0.3s;
 }
 
 
 
-/* Image box with rounded corners */
+
 .image-box {
   position: relative;
   border-radius: 40px;
@@ -184,7 +216,7 @@ li a:hover {
   border-radius: 40px;
 }
 
-/* Blurred paragraph overlay */
+/* paragraph overlay */
 .overlay {
   font-family: moris;
   position: absolute;
@@ -193,10 +225,10 @@ li a:hover {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; /* horizontally center text */
+  justify-content: center; 
   backdrop-filter: blur(2px);
   color: white;
-  padding: 0 2px; /* small horizontal padding */
+  padding: 0 2px; 
   font-size: 1.02rem;
   text-shadow: 0px 0px 10px black;
   text-align: center;
@@ -211,15 +243,16 @@ li a:hover {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; /* horizontally center text */
+  justify-content: center; 
   backdrop-filter: blur(2px);
   color: white;
-  padding: 0 2px; /* small horizontal padding */
+  padding: 0 2px;
   font-size: 1.0rem;
   text-shadow: 0px 0px 10px black;
   text-align: center;
   box-sizing: border-box;
 }
+
 
 /* Headings */
 .heading {
@@ -241,8 +274,15 @@ li a:hover {
   text-shadow: 0px 0px 10px rgb(255, 255, 255);
   font-size: 3rem;
   margin: 0;
+  transition-duration: 0.2s;
 }
 
+h1:hover {
+  color: rgb(216, 115, 0);
+  text-shadow: 0px 0px 10px black;
+}
+
+/*headings */
 
 
 
@@ -267,18 +307,10 @@ li a:hover {
 @media (max-width: 875px) {
 
     body {
-    background: none; /* remove background from body */
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('bg/bg1-m.jpg') center/cover no-repeat;
-    z-index: -1;
+    background: url('bg/bg1-m.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
 
@@ -330,6 +362,7 @@ li a {
 
   .logo {
     color: rgb(216, 115, 0);
+    margin-left: 0;
     text-shadow: 0px 0px 30px white;
     font-family: 'main';
     font-size: 2.5rem;
@@ -428,9 +461,9 @@ li a {
 
 
 
-/* Timeline Responsiveness */
+/* Timeline Responsive */
 
-/* Base smaller screen scaling */
+/*smaller screen scaling */
 @media (max-width: 1200px) {
   .timeline {
     width: 90%;
@@ -603,12 +636,12 @@ li a {
 
 
 
-/* my changings */
+/* EXTRAAAAAAAAAAAAAAAAAAAAAAA changings */
 
 
 
 
-/*containers */ /* mobile */
+ /* mobile */
 
 @media (max-width: 875px) {
 
@@ -616,25 +649,25 @@ li a {
     margin-top: 150px;
   }
 
-  /* Hide the vertical line */
+
   .line {
     display: none;
   }
 
-  /* Hide the headings */
+
   .heading {
     display: none;
   }
 
-  /* Stack containers on top of each other */
+  /* containers on top of each other */
   .row {
     flex-direction: column;
-    align-items: center; /* center horizontally */
-    margin: 50px 0; /* smaller vertical spacing */
+    align-items: center; 
+    margin: 50px 0; 
   }
 
   .container {
-    width: 75%; /* full width for stacked view */
+    width: 75%; 
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -651,30 +684,30 @@ font-size: 1.3rem;
 }
 
 @media (max-width: 730px) {
-    /* Stack containers on top of each other */
+    /*containers on top*/
   .row {
     flex-direction: column;
-    align-items: center; /* center horizontally */
-    margin: 30px 0; /* smaller vertical spacing */
+    align-items: center; 
+    margin: 30px 0; 
   }
 
   .container {
-    width: 75%; /* full width for stacked view */
+    width: 75%; 
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 }
 
 @media (max-width: 425px) {
-    /* Stack containers on top of each other */
+    
   .row {
     flex-direction: column;
-    align-items: center; /* center horizontally */
-    margin: 18px 0; /* smaller vertical spacing */
+    align-items: center;
+    margin: 18px 0; 
   }
 
   .container {
-    width: 75%; /* full width for stacked view */
+    width: 75%;
     margin-left: 0 !important;
     margin-right: 0 !important;
 
@@ -682,15 +715,15 @@ font-size: 1.3rem;
 }
 
 @media (max-width: 375px) {
-    /* Stack containers on top of each other */
+   
   .row {
     flex-direction: column;
-    align-items: center; /* center horizontally */
-    margin: 20px 0; /* smaller vertical spacing */
+    align-items: center; 
+    margin: 20px 0; 
   }
 
   .container {
-    width: 80%; /* full width for stacked view */
+    width: 80%; 
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -699,7 +732,8 @@ font-size: 1.3rem;
 
 
 
-/* containers*/ /* mobile */
+/*  mobile */
+
 
 
 
@@ -731,6 +765,7 @@ font-size: 1.3rem;
 
 
 /* time line for header */
+
 
 
 
@@ -779,7 +814,7 @@ font-size: 0.75rem;
 }
 }
 
-                       @media (max-width: 875px) {
+       @media (max-width: 875px) {
   .overlay {
     height: 15%;
 
@@ -999,3 +1034,36 @@ font-size: 0.95rem;
 }
 /* headings */
 
+
+
+
+/* hover on container */
+#green:hover {
+  box-shadow: 0px 0px 35px rgba(200, 255, 0, 0.5);
+  scale: 1.040;
+}
+
+#orange:hover {
+  box-shadow: 0px 0px 35px rgba(255, 136, 0, 0.5);
+  scale: 1.040;
+}
+
+#sky:hover {
+  box-shadow: 0px 0px 35px rgba(0, 255, 221, 0.5);
+  scale: 1.040;
+}
+
+#blue:hover {
+  box-shadow: 0px 0px 35px rgba(0, 47, 255, 0.5);
+  scale: 1.040;
+}
+
+#black:hover {
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.7);
+  scale: 1.040;
+}
+
+#white:hover {
+  box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.5);
+  scale: 1.040;
+}
