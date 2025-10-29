@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kplpy.github.io/tolkien.ig/sitemap.xml
